@@ -2,7 +2,7 @@
 
 from distutils.core import setup
 
-setup(name='numericalAnalysis',
+setup(name='numericalAnalysisTool',
       version='0.1',
       description='Numerical anlysis tool',
       author='Clément Dutriez',
