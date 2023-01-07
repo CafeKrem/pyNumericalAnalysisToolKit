@@ -11,3 +11,5 @@ setup(name='numericalAnalysisTool',
       packages=['numericalAnalysis'],
       long_description=open('README.rst').read(),
      )
+
+packages = [ numericalAnalysis ]
