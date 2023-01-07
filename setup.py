@@ -8,5 +8,6 @@ setup(name='numericalAnalysis',
       author='Clément Dutriez',
       author_email='clement.dutriez@u-pem.fr',
       url='https://github.com/CafeKrem/pyNumericalAnlysis',
-      packages=['numericalAnalysis']
+      packages=['numericalAnalysis'],
+      long_description=open('README.rst').read(),
      )
