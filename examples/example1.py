@@ -1,4 +1,4 @@
-from src.analysor import Analysor
+from NumericalAnalysis.analysor import Analysor
 
 
 def scoring_function_multiplication(a,b):

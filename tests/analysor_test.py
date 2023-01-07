@@ -1,6 +1,6 @@
 import unittest
 
-from src.analysor import Analysor
+from NumericalAnalysis.analysor import Analysor
 
 
 def fct_1(x):
