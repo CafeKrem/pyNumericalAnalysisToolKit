@@ -15,11 +15,11 @@ You can find other example in [examples/](examples/) directory.
 In this example I will take two function taking two paramter and returning one value. 
 
 ```math
-f_add(a,b) = a + b
+f\_add(a,b) = a + b
 ```
 
 ```math
-f_mult(a,b) = a.b
+f\_mult(a,b) = a.b
 ```
 
 So you will have to define those function 
