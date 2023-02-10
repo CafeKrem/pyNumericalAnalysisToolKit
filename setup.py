@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="numericalAnalysisTool",
-    version="0.1.4",
+    version="0.2.0",
     author="Clément Dutriez",
     author_email="clement.dutriez@u-pem.fr",
     description="Numerical anlysis tool kit",
