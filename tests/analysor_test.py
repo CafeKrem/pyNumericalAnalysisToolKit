@@ -49,5 +49,18 @@ class AnalysorTest(unittest.TestCase):
         analysor.compute()
         analysor.draw_linear_2D_graph()
 
+    def test_draw_heatmap_with_2_parameter_variation(self):
+        fct1 =  lambda a, b: a / ( b + 1)
+        parameter_range = {
+            "a" : range(0,20),
+            "b" : [i/100 for i in range(101)]
+        }
+        analysor = Analysor()
+        analysor.add_function(fct1,parameter_range)
+        analysor.compute()
+        analysor.draw_heatmap()
+
+
+
 if __name__ == '__main__':
     unittest.main()
