@@ -1,6 +1,6 @@
 import setuptools
 
-with open("README.rst", "r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -11,6 +11,7 @@ setuptools.setup(
     description="Numerical anlysis tool kit",
     url="https://github.com/CafeKrem/pyNumericalAnlysis",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
     python_requires='>=3.6',
     install_requires=[
