@@ -4,6 +4,7 @@ from itertools import product
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+import plotly.graph_objects as go
 
 
 class Analysor:
@@ -62,3 +63,22 @@ class Analysor:
             g.add_legend()
             file_name = f"{Analysor.BUILDER_DIR}/{'_'.join([fct.__name__ for fct in self._functions.keys()])}_{param_name}.png"
             g.savefig(file_name)
+
+    def draw_parcoords(self):
+
+        fct,parameters_range = list(self._functions.items())[0]
+        line = dict(color=self._result[fct][self._target_name])
+        dimensions = [
+            dict(
+                range=[min(parameters_range[param_name]),max(parameters_range[param_name])],
+                label= param_name ,values=self._result[fct][param_name]
+            )
+            for param_name in self._param_names
+        ]
+        dimensions.append(dict(range=[min(self._result[fct][self._target_name]),max(self._result[fct][self._target_name])],
+                label= self._target_name ,values=self._result[fct][self._target_name]
+                               )
+                          )
+        parcoords =  go.Parcoords(line=line,dimensions=dimensions)
+        return go.Figure(data=parcoords)
+

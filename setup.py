@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="numericalAnalysisTool",
-    version="0.2.0",
+    version="0.3.0",
     author="Clément Dutriez",
     author_email="clement.dutriez@u-pem.fr",
     description="Numerical anlysis tool kit",
@@ -17,7 +17,8 @@ setuptools.setup(
     install_requires=[
         'pandas',
         'numpy',
-        'seaborn'
+        'seaborn',
+        'plotly'
     ]
 
 )
