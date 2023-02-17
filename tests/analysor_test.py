@@ -1,4 +1,5 @@
 import unittest
+from math import exp
 
 from numericalAnalysis.analysor import Analysor
 
@@ -59,6 +60,20 @@ class AnalysorTest(unittest.TestCase):
         analysor.add_function(fct1,parameter_range)
         analysor.compute()
         analysor.draw_heatmap()
+
+    def test_draw_Parcoords_smoke_test(self):
+        fct1 = lambda a,b,c,d : a * b / (c * d + 1)
+        parameter_range = {
+            "a": range(0, 20),
+            "b": [i / 100 for i in range(0,101,5)],
+            "c": [i  for i in range(0,101,5)],
+            "d": [exp(i) for i in range(0,101,5)],
+        }
+        analysor = Analysor()
+        analysor.add_function(fct1,parameter_range)
+        analysor.compute()
+        fig = analysor.draw_parcoords()
+        fig.show()
 
 
 
